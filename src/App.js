@@ -10,16 +10,23 @@ pdfjs.GlobalWorkerOptions.workerSrc = '/worker.js';
 const CITATION_DATA = {
   1: {
     pageNumber: 3,
-    highlightArea: { top: '21.5%', left: '10%', width: '80%', height: '5%' }
+    // Matches the first paragraph in your Page 3 screenshot
+    highlightArea: { top: '19.5%', left: '8%', width: '45%', height: '6%' }
   },
   2: {
     pageNumber: 5,
-    highlightArea: { top: '25%', left: '10%', width: '80%', height: '5%' }
+    // Matches the 'Revenue' paragraph in your Page 5 screenshot
+    highlightArea: { top: '25.5%', left: '8%', width: '84%', height: '4%' }
   },
   3: {
     pageNumber: 15,
-    // Coordinates specific to "Gain on sale of non-current assets" row
-    highlightArea: { top: '29.8%', left: '8%', width: '84%', height: '2.2%' }
+    // Adjusted specifically for the 'Gain on sale' row (3rd row in table)
+    highlightArea: { 
+      top: '34.5%', // Moved down to hit the correct row
+      left: '8%', 
+      width: '84%', 
+      height: '2%' 
+    }
   }
 };
 
